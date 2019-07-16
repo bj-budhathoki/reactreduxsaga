@@ -1,3 +1,5 @@
+import { all } from "redux-saga/effects";
+import postSagas from "./posts/postSagas";
 export default function* rootSaga() {
-  yield console.log("hello daga");
+  yield all([postSagas()]);
 }

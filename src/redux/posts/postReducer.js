@@ -12,6 +12,7 @@ const postReducer = (state = initailState, action) => {
         fetching: true
       };
     case postActionTypes.FETCH_POST_SUCCESS:
+      console.log("reducer ", action.payload);
       return {
         ...state,
         fetching: false,
